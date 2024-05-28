@@ -8,17 +8,17 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 $email = $dados['email'];
 $senha = $dados['senha'];
-$retornoValidar = verificarSenhaCriptografada('*', 'adm', 'email', $email, 'senha', $senha, 'ativo', 'A');
+$retornoValidar = verificarSenhaCriptografada('*', 'cliente', 'email', $email, 'senha', $senha, 'ativo', 'A');
 
 if ($retornoValidar) {
-    if ($retornoValidar === 'usuario') {
+    if ($retornoValidar === 'Usuario') {
         echo json_encode(['success' => false, 'message' => 'Usuário invalido']);
     } else if ($retornoValidar === 'senha') {
         echo json_encode(['success' => false, 'message' => 'Senha invalida!']);
     } else {
-        $_SESSION['idadm'] = $retornoValidar->idadm;
+        $_SESSION['idcliente'] = $retornoValidar->idcliente;
         $_SESSION['nome'] = $retornoValidar->nome;
-        //$_SESSION['foto'] = $retornoValidar->foto;
+//        $_SESSION['foto'] = $retornoValidar->foto;
         echo json_encode(['success' => true, 'message' => "Logado com sucesso!"]);
     }
 } else {

@@ -8,7 +8,7 @@ include_once "./func/func.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href="./indexcss.css">
     <script src="https://kit.fontawesome.com/ab00d86059.js" crossorigin="anonymous"></script>
     <!--    <link rel="shortcut icon" type="imagex/png" href="./img/CAMINHO">-->
@@ -26,38 +26,61 @@ include_once "./func/func.php";
 
 <div class="container meio">
     <div class="login-container">
-        <form method="post" name="frmLogin" id="frmLogin">
-            <h2>Área de Login</h2>
+        <form method="post" action="cadastro_back.php" name="frmCadastro" id="frmCadastro">
+            <h2>Área de Cadastro</h2>
             <div class="input-div one">
                 <div class="i">
                     <i class="fas fa-user"></i>
                 </div>
                 <div>
-
-                    <h5>Email</h5>
-                    <input type="email" name="email" id="email" autocomplete="off" required class="m-0 input">
+                    <h5>Nome</h5>
+                    <input type="text" name="nome" id="nome" autocomplete="off" required class=" input">
                 </div>
             </div>
-            <div class="input-div two">
+            <div class="input-div one">
+                <div class="i">
+                    <i class="	fa fa-envelope"></i>
+                </div>
+                <div>
+
+                    <h5>Email</h5>
+                    <input type="email" name="email" id="email" autocomplete="off" required class=" input">
+                </div>
+            </div>
+            <div class="input-div one">
                 <div class="i">
                     <i class="fas fa-lock"></i>
                 </div>
                 <div>
                     <h5>Senha</h5>
-                    <input type="password" name="senha" id="senha" autocomplete="off" required class="m-0 input"
-                           maxlength="8">
+
+                    <input type="password" name="senha" id="senha" autocomplete="off" required class="placered input"
+                           maxlength="8" placeholder="A senha precisa ter 8 dígitos!">
+
                     <button id="iconeOlho" type="button"
                             class="mdi mdi-eye"
                             style="background: transparent; border: transparent; box-shadow: none;margin-top: 4%;margin-left: 98%;cursor: pointer"
                             onclick="mostrarsenha();"></button>
+
+                </div>
+            </div>
+            <div class="input-div one">
+                <div class="i">
+                    <i class="fas fa-id-card"></i>
+                </div>
+
+                <div>
+
+                    <h5>CPF</h5>
+                    <input type="text" name="cpf" id="cpf" onkeydown="fMasc( this, mCPF );" maxlength="14"  autocomplete="off" required class="input cpf_adm semfocus">
                 </div>
             </div>
             <div class="erroBonito p-1 text-center" role="alert" id="alertlog" style="display: none;">
             </div>
-            <button type="button" class="btn btn-lg" onclick="fazerLogin();">Login</button>
-            <a href="cadastro.php" style="background: transparent; border: transparent; box-shadow: none;"
-               onclick="redireciona('cadastro.php')">Não possui login? Cadastre-se</a>
-            
+            <button type="submit" class="btn btn-lg">Cadastro</button>
+            <a href="index.php" style="background: transparent; border: transparent; box-shadow: none;"
+               onclick="redireciona('index.php')">Já possui cadastro? Faça Login!</a>
+
         </form>
     </div>
 </div>
@@ -68,5 +91,3 @@ include_once "./func/func.php";
         crossorigin="anonymous"></script>
 </body>
 </html>
-
-
