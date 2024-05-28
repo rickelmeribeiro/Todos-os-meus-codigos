@@ -12,6 +12,8 @@
 <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
 <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"&gt;>
+
 <!-- LINKS DO HEAD -->
 
 <!-- LINKS DO FOOTER -->
