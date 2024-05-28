@@ -16,6 +16,14 @@ function fMasc(objeto,mascara) {
 function fMascEx() {
     obj.value=masc(obj.value)
 }
-if (document.getElementById("cpf_adm_edit")) {
-    document.getElementById("cpf_adm_edit").focus();
+function mCPF(cpf_adm) {
+    cpf_adm = cpf_adm.replace(/\D/g, "")
+    cpf_adm = cpf_adm.replace(/(\d{3})(\d)/, "$1.$2")
+    cpf_adm = cpf_adm.replace(/(\d{3})(\d)/, "$1.$2")
+    cpf_adm = cpf_adm.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+    return cpf_adm
+}
+
+if (document.getElementById("cpf_adm")) {
+    document.getElementById("cpf_adm").focus();
 }
