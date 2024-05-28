@@ -1,6 +1,5 @@
 <!-- BOTAO DE LOGIN -->
-<button  id="btn-entere" onclick="btnEnter();fazerLogin();"
-         type="button">
+ <button type="button" class="btn btn-lg" onclick="fazerLogin();">Login</button>
     <!-- FIM BOTAO DE LOGIN -->
 
 
