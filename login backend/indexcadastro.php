@@ -8,8 +8,9 @@ include_once "./func/func.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="./indexcss.css">
+    <title>Área de Cadastro</title>
+    <link rel="stylesheet" href="./css/indexcss.css">
+    <link rel="shortcut icon" type="imagex/png" href="./img/icon.ico">
     <script src="https://kit.fontawesome.com/ab00d86059.js" crossorigin="anonymous"></script>
     <!--    <link rel="shortcut icon" type="imagex/png" href="./img/CAMINHO">-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -77,7 +78,7 @@ include_once "./func/func.php";
             </div>
             <div class="erroBonito p-1 text-center" role="alert" id="alertlog" style="display: none;">
             </div>
-            <button type="submit" class="btn btn-lg">Cadastro</button>
+            <button type="submit" onclick="certo();" class="btn btn-lg">Cadastro</button>
             <a href="index.php" style="background: transparent; border: transparent; box-shadow: none;"
                onclick="redireciona('index.php')">Já possui cadastro? Faça Login!</a>
 
@@ -85,7 +86,7 @@ include_once "./func/func.php";
     </div>
 </div>
 
-<script src="./func/index.js"></script>
+<script src="./func/indexjs.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
